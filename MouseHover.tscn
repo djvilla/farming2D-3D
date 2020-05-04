@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/hover.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="QuadMesh" id=1]
+
+[node name="MouseHover" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -15.84, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.15, -1.5 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( -3, 0, -3.25841e-07, 0, 0.3, 0, 9.77524e-07, 0, -1, 0, 0.15, 1.5 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 3.57746e-08, 0, -1, 0, 0.3, 0, 3, 0, 1.19249e-08, 1.5, 0.15, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( -4.88762e-07, 0, 1, 0, 0.3, 0, -3, 0, -1.62921e-07, -1.5, 0.15, 0 )
+mesh = SubResource( 1 )
+material/0 = null
