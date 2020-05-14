@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Mud_Corner2.obj-4410a737d27d6ec3947a7138fc96c856.mesh"
+
+[deps]
+
+files=[ "res://.import/Mud_Corner2.obj-4410a737d27d6ec3947a7138fc96c856.mesh" ]
+
+source_file="res://Resources/Models/Ground/Mud_Corner2.obj"
+dest_files=[ "res://.import/Mud_Corner2.obj-4410a737d27d6ec3947a7138fc96c856.mesh", "res://.import/Mud_Corner2.obj-4410a737d27d6ec3947a7138fc96c856.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

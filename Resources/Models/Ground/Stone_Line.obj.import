@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Stone_Line.obj-15d923913ab914fd2058ce711288c667.mesh"
+
+[deps]
+
+files=[ "res://.import/Stone_Line.obj-15d923913ab914fd2058ce711288c667.mesh" ]
+
+source_file="res://Resources/Models/Ground/Stone_Line.obj"
+dest_files=[ "res://.import/Stone_Line.obj-15d923913ab914fd2058ce711288c667.mesh", "res://.import/Stone_Line.obj-15d923913ab914fd2058ce711288c667.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

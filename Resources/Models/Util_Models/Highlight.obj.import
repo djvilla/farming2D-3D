@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Highlight.obj-ce7cf32c82e9356f9a60b3be57d4d73c.mesh"
+
+[deps]
+
+files=[ "res://.import/Highlight.obj-ce7cf32c82e9356f9a60b3be57d4d73c.mesh" ]
+
+source_file="res://Resources/Models/Util_Models/Highlight.obj"
+dest_files=[ "res://.import/Highlight.obj-ce7cf32c82e9356f9a60b3be57d4d73c.mesh", "res://.import/Highlight.obj-ce7cf32c82e9356f9a60b3be57d4d73c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

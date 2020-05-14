@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Mud_Spot_Line.obj-304a7e38b20e234d243a58176a79408d.mesh"
+
+[deps]
+
+files=[ "res://.import/Mud_Spot_Line.obj-304a7e38b20e234d243a58176a79408d.mesh" ]
+
+source_file="res://Resources/Models/Ground/Mud_Spot_Line.obj"
+dest_files=[ "res://.import/Mud_Spot_Line.obj-304a7e38b20e234d243a58176a79408d.mesh", "res://.import/Mud_Spot_Line.obj-304a7e38b20e234d243a58176a79408d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

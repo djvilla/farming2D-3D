@@ -1,7 +1,7 @@
 extends Spatial
 
 const CAMERA_RAY_LENGTH = 1000
-const MOUSE_HOVER_Y_OFFSET = Vector3(0, 0, 0)
+const MOUSE_HOVER_Y_OFFSET = Vector3(0, .01, 0)
 
 onready var camera := $Player/Camera
 onready var player := $Player
@@ -24,14 +24,18 @@ func _handle_mouse_click(event: InputEvent):
 		#var world_position = Vector3(m_position.x, m_position.y, m_position.z)
 		var grid_position = gridMap.world_to_map(m_position)
 		var selected_cell = gridMap.get_cell_item(grid_position.x, grid_position.y, grid_position.z)
+		
 		# Disables the user from placing a tile next to another existing tile
 		if selected_cell != gridMap.INVALID_CELL_ITEM:
-			gridMap.set_cell_item(grid_position.x, grid_position.y, grid_position.z, 1)
+			gridMap.set_cell_item(grid_position.x, grid_position.y, grid_position.z, 4)
 		
 		# Uncomment this and comment the select cell conditional above to build tiles in game
-#		gridMap.set_cell_item(grid_position.x, grid_position.y, grid_position.z, 1)
+		#gridMap.set_cell_item(grid_position.x, grid_position.y, grid_position.z, -1)
 		
-		print(selected_cell)
+#		print(selected_cell)
+#		print(grid_position)
+		print(gridMap.get_cell_item(grid_position.x, grid_position.y, grid_position.z))
+
 		
 
 

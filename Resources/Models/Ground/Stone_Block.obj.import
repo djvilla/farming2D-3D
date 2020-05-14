@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Stone_Block.obj-c778ad987a8a69825b24ff5696065fe5.mesh"
+
+[deps]
+
+files=[ "res://.import/Stone_Block.obj-c778ad987a8a69825b24ff5696065fe5.mesh" ]
+
+source_file="res://Resources/Models/Ground/Stone_Block.obj"
+dest_files=[ "res://.import/Stone_Block.obj-c778ad987a8a69825b24ff5696065fe5.mesh", "res://.import/Stone_Block.obj-c778ad987a8a69825b24ff5696065fe5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
