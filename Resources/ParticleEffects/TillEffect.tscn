@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Models/Ground/Mud_block.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Scripts/Resources/ParticleEffects/tillEffect.gd" type="Script" id=2]
+[ext_resource path="res://Resources/textures/ground.tres" type="Material" id=3]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 3, 3, 3 )
+direction = Vector3( 0, 25, 0 )
+gravity = Vector3( 0, -8, 0 )
+initial_velocity = 8.0
+radial_accel_random = 1.0
+tangential_accel = 1.0
+tangential_accel_random = 0.5
+scale_random = 0.5
+
+[node name="TillEffect" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="TillParticle" type="Particles" parent="."]
+transform = Transform( 0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.5, 0 )
+material_override = ExtResource( 3 )
+emitting = false
+amount = 4
+one_shot = true
+speed_scale = 8.0
+process_material = SubResource( 1 )
+draw_pass_1 = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]

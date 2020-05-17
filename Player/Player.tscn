@@ -293,8 +293,11 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0 )
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
@@ -315,7 +318,7 @@ material/0 = null
 [node name="Sprite3D" type="Sprite3D" parent="."]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.788011, 0.615662, 0, -0.615662, 0.788011, 0, 6.2, 8 )
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 7, 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle_down = SubResource( 20 )
