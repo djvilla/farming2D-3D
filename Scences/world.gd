@@ -32,7 +32,7 @@ func _handle_mouse_click(event: InputEvent):
 	
 	var m_position = _get_mouse_projected_position(event.position)
 	if m_position:
-		#var world_position = Vector3(m_position.x, m_position.y, m_position.z)
+		# Convert world coordinate to grid coordinate, then get the choosen cell using that coordinate
 		var grid_position = gridMap.world_to_map(m_position)
 		var selected_cell = gridMap.get_cell_item(grid_position.x, grid_position.y, grid_position.z)
 		
@@ -46,13 +46,26 @@ func _handle_mouse_click(event: InputEvent):
 		# Uncomment this and comment the select cell conditional above to build tiles in game
 		#gridMap.set_cell_item(grid_position.x, grid_position.y, grid_position.z, -1)
 
+func _give_player_block_direction(mpos: Vector3):
+	# Get the players world coordinates, turn it into a 2d Vector
+	var player_world_position = player.global_transform.origin
+	var player_position = Vector2(player_world_position.x, player_world_position.z)
+	# Convert mpos to a 2d Vector
+	var block_direction = Vector2(mpos.x, mpos.z)
+	# Get the direction the player should face
+	var direction_to_face = player_position.direction_to(block_direction)
+	# Make the player face that direction
+	return player.till(direction_to_face)
+
 func _handle_block(mpos: Vector3, itemPos: Vector3, block_name: String):
 	match block_name:
 		"Dirt_Block":
-			# Till effect
-			_play_effect_at_click(mpos)
-			# Change block type
-			gridMap.set_cell_item(itemPos.x, itemPos.y, itemPos.z, groundLibary.find_item_by_name("Mud_block"))
+			# Player Animation
+			if _give_player_block_direction(mpos):
+				# Till effect
+				_play_effect_at_click(mpos)
+				# Change block type
+				gridMap.set_cell_item(itemPos.x, itemPos.y, itemPos.z, groundLibary.find_item_by_name("Mud_block"))
 
 
 func _play_effect_at_click(pos: Vector3):
